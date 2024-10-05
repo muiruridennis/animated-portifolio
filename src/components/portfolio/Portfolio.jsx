@@ -5,11 +5,11 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 const items = [
   {
     id: 1,
-    title: 'Memories - Social Platform',
+    title: 'Opaline - Connecting service providers with consumers',
     description: 'Memories is a social platform where users can create and share their cherished memories with friends and family. It allows users to upload photos, write stories, and connect with others through their shared experiences.',
     liveDemo: 'https://github.com/muiruridennis/MernApp',
     codeRepository: 'https://github.com/muiruridennis/MernApp',
-    img: "/memories.jpg",
+    img: "/opaline.jpg",
   },
   {
     id: 2,

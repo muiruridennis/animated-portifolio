@@ -1,4 +1,5 @@
 @import "../../app.scss";
+
 .contact {
   height: 100%;
   max-width: 1366px;
@@ -6,9 +7,9 @@
   display: flex;
   align-items: center;
   gap: 50px;
-  
+
   @include mobile {
-    overflow-y: auto; 
+    overflow-y: auto;
     width: 100%;
     padding: 10px;
     flex-direction: column;
@@ -47,7 +48,7 @@
         font-size: 36px;
         line-height: 40px;
       }
-      
+
       @include tablet {
         font-size: 40px;
         line-height: 45px;
@@ -61,7 +62,7 @@
       @include mobile {
         font-size: 20px;
       }
-      
+
       @include tablet {
         font-size: 22px;
       }
@@ -74,7 +75,7 @@
       @include mobile {
         font-size: 16px;
       }
-      
+
       @include tablet {
         font-size: 16px;
       }
@@ -88,7 +89,7 @@
     @include mobile {
       padding: 20px;
       width: 100%;
-      top:0
+      top: 0
     }
 
     @include tablet {
@@ -143,7 +144,15 @@
     }
   }
 
-  .success-message,
+  .success-message {
+    background-color: #4caf50;
+    padding: 15px;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 10px;
+
+  }
+
   .error-message {
     padding: 15px;
     font-size: 16px;
@@ -151,7 +160,7 @@
     @include mobile {
       font-size: 14px;
     }
-    
+
     @include tablet {
       font-size: 15px;
     }

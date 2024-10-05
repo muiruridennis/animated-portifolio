@@ -1,63 +1,51 @@
+
 import React from "react";
 import "./testimonials.scss";
 import { motion } from "framer-motion";
-import { FaStar } from "react-icons/fa";
 
-const testimonials = [
+const testimonialsData = [
   {
-    id: 1,
-    name: "Alice Atero",
-    role: "CEO, Pasha Innovators",
-    testimonial: "Working with Muiruri was a game-changer. His attention to detail and innovative thinking helped bring our project to life.",
+    name: "Alice Jamy",
+    title: "CEO of Creative Co.",
+    testimonial: "Dennis's  work transformed our digital presence and increased our conversions significantly!",
     image: "/testimonialone.jpg",
-    rating: 5,
   },
   {
-    id: 2,
-    name: "Jane Fellin",
-    role: "Founder, Creative Studio",
-    testimonial: "Muiruri's ability to transform ideas into beautiful, functional designs is remarkable. I highly recommend his services.",
+    name: "Ivy Aggeza",
+    title: "Marketing Director at Venus Furnitures",
+    testimonial: "An exceptional developer! Dennis understood our needs and delivered beyond expectations.",
     image: "/testimonialtwo.jpg",
-    rating: 4,
   },
   {
-    id: 3,
-    name: "Aaron Chege",
-    role: "Product Manager, Kivuli Inc.",
-    testimonial: "Exceptional work! The e-commerce platform he developed for us exceeded our expectations.",
+    name: "Paul Gichia",
+    title: "Fund Wallet Credit Limited.",
+    testimonial: "Highly recommend Dennis! Their attention to detail and creativity is unmatched.",
     image: "/testimonialthree.jpg",
-    rating: 5,
-  },
+  }
 ];
 
 const Testimonials = () => {
   return (
-    <div className="testimonials">
+    <section className="testimonials-container">
       <h2>What Clients Say</h2>
-      <div className="testimonial-carousel">
-        {testimonials.map((item, index) => (
-          <motion.div 
-            key={item.id} 
-            className="testimonial-card"
-            initial={{ opacity: 0, y: 50 }}
+      <div className="testimonials-list">
+        {testimonialsData.map((testimonial, index) => (
+          <motion.div
+            className="testimonial-item"
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.3 }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.5 }}
           >
-            <div className="image-wrapper">
-              <img src={item.image} alt={item.name} />
-            </div>
-            <div className="testimonial-content">
-              <p>"<span>{item.testimonial}</span>"</p>
-              <h4>{item.name}</h4>
-              <h5>{item.role}</h5>
-              <div className="rating">
-                {Array(item.rating).fill(<FaStar color="#FFD700" />)}
-              </div>
-            </div>
+            <img src={testimonial.image} alt={testimonial.name} className="client-image" />
+            <p className="testimonial-text">"{testimonial.testimonial}"</p>
+            <h4 className="client-name">{testimonial.name}</h4>
+            <p className="client-title">{testimonial.title}</p>
           </motion.div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

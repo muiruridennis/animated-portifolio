@@ -81,7 +81,7 @@ const Contact = () => {
           Ready to take your digital presence to the next level?
         </motion.h3>
         <motion.p variants={variants} className="subtext">
-        Reach out to me by filling out the form and let us discuss how we can achieve your goals."
+        Reach out to me by filling out the form and let us discuss how we can achieve your goals.
         </motion.p>
 
         <motion.div className="item" variants={variants}>
